@@ -25,7 +25,7 @@ public class Window {
 			public void run() {
 				try {
 					Window window = new Window();
-					window.frame.setVisible(true);
+					window.frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -91,10 +91,10 @@ public class Window {
 		end.set(Calendar.MONTH, Calendar.JUNE);
 		end.set(Calendar.DAY_OF_MONTH, 24);
 
-		if (start.compareTo(end) > 0) {
+		/*if (start.compareTo(end) > 0) {
 			JOptionPane.showMessageDialog(null, "Data wa¿noœci programu minê³a.", "To koniec!", JOptionPane.ERROR_MESSAGE);
 			System.exit(0);
-		}
+		}*/
 		Simulation sim = new Simulation(end, start);
 		
 		int numOfWeds = sim.howManyWeds();
